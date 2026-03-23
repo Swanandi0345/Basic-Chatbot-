@@ -1,0 +1,36 @@
+def get_response(user_input):
+    user_input = user_input.lower()
+
+    if "hello" in user_input or "hi" in user_input:
+        return "Hi there! How can I help you?"
+
+    elif "how are you" in user_input:
+        return "I'm fine, thanks! How about you?"
+
+    elif "good" in user_input or "fine" in user_input:
+        return "Good to hear that!"
+
+    elif "name" in user_input:
+        return "My name is ChatBot! Nice to meet you!"
+
+    elif "age" in user_input:
+        return "I'm just a bot, I don't have any age!"
+
+    elif "help" in user_input:
+        return "Sure! You can ask me anything simple."
+
+    elif "bye" in user_input or "goodbye" in user_input:
+        return "Goodbye! Have a nice day!"
+
+    else:
+        return "I don't understand that. Try saying hello, how are you, or bye."
+print("ChatBot: Hi! I'm a simple chatbot. Type 'bye' to exit.")
+
+while True:
+    user = input("You: ")
+
+    response = get_response(user)
+    print("ChatBot:", response)
+
+    if "bye" in user.lower():
+        break
